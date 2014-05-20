@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6694E1FD-52E8-4E57-99B7-0C815CF746DC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ChatClient</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>01660A0D-F5CB-4D6F-AB69-EFD5C9C7C534</key>
+		<string>ssh://bitbucket.org/ProFFeSSoR/sockets-raywenderlich.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ChatClient.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>01660A0D-F5CB-4D6F-AB69-EFD5C9C7C534</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://bitbucket.org/ProFFeSSoR/sockets-raywenderlich.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>01660A0D-F5CB-4D6F-AB69-EFD5C9C7C534</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>01660A0D-F5CB-4D6F-AB69-EFD5C9C7C534</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ChatClient</string>
+		</dict>
+	</array>
+</dict>
+</plist>
