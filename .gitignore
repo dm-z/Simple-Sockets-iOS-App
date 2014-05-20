@@ -1,0 +1,12 @@
+Build
+build
+DerivedData
+.DS_Store
+xcuserdata
+*.xcworkspace
+Podsld
+*~
+Pods
+*.swp
+*.lock
+.idea
