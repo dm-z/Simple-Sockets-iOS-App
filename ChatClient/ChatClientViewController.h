@@ -1,5 +1,5 @@
 //
-//  CCAppDelegate.h
+//  ChatClientViewController.h
 //  ChatClient
 //
 //  Created by Dmitry Zozulya on 19.05.14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CCAppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface ChatClientViewController : UIViewController
 
 @end

@@ -1,18 +1,18 @@
 //
-//  CCViewController.m
+//  ChatClientViewController.m
 //  ChatClient
 //
 //  Created by Dmitry Zozulya on 19.05.14.
 //  Copyright (c) 2014 Dmitry Zozulya. All rights reserved.
 //
 
-#import "CCViewController.h"
+#import "ChatClientViewController.h"
 
-@interface CCViewController ()
+@interface ChatClientViewController ()
 
 @end
 
-@implementation CCViewController
+@implementation ChatClientViewController
 
 - (void)viewDidLoad
 {

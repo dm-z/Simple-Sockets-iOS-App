@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "CCAppDelegate.h"
+#import "ChatClientAppDelegate.h"
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([CCAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([ChatClientAppDelegate class]));
     }
 }

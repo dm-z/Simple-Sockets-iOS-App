@@ -12,9 +12,9 @@
 		F7C134CF192A90DB003D20F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C134CE192A90DB003D20F8 /* UIKit.framework */; };
 		F7C134D5192A90DB003D20F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F7C134D3192A90DB003D20F8 /* InfoPlist.strings */; };
 		F7C134D7192A90DB003D20F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C134D6192A90DB003D20F8 /* main.m */; };
-		F7C134DB192A90DB003D20F8 /* CCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C134DA192A90DB003D20F8 /* CCAppDelegate.m */; };
+		F7C134DB192A90DB003D20F8 /* ChatClientAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C134DA192A90DB003D20F8 /* ChatClientAppDelegate.m */; };
 		F7C134DE192A90DB003D20F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C134DC192A90DB003D20F8 /* Main.storyboard */; };
-		F7C134E1192A90DB003D20F8 /* CCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C134E0192A90DB003D20F8 /* CCViewController.m */; };
+		F7C134E1192A90DB003D20F8 /* ChatClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C134E0192A90DB003D20F8 /* ChatClientViewController.m */; };
 		F7C134E3192A90DB003D20F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C134E2192A90DB003D20F8 /* Images.xcassets */; };
 		F7C134EA192A90DB003D20F8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C134E9192A90DB003D20F8 /* XCTest.framework */; };
 		F7C134EB192A90DB003D20F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C134CA192A90DB003D20F8 /* Foundation.framework */; };
@@ -42,11 +42,11 @@
 		F7C134D4192A90DB003D20F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F7C134D6192A90DB003D20F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F7C134D8192A90DB003D20F8 /* ChatClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChatClient-Prefix.pch"; sourceTree = "<group>"; };
-		F7C134D9192A90DB003D20F8 /* CCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCAppDelegate.h; sourceTree = "<group>"; };
-		F7C134DA192A90DB003D20F8 /* CCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCAppDelegate.m; sourceTree = "<group>"; };
+		F7C134D9192A90DB003D20F8 /* ChatClientAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatClientAppDelegate.h; sourceTree = "<group>"; };
+		F7C134DA192A90DB003D20F8 /* ChatClientAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatClientAppDelegate.m; sourceTree = "<group>"; };
 		F7C134DD192A90DB003D20F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F7C134DF192A90DB003D20F8 /* CCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCViewController.h; sourceTree = "<group>"; };
-		F7C134E0192A90DB003D20F8 /* CCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCViewController.m; sourceTree = "<group>"; };
+		F7C134DF192A90DB003D20F8 /* ChatClientViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatClientViewController.h; sourceTree = "<group>"; };
+		F7C134E0192A90DB003D20F8 /* ChatClientViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatClientViewController.m; sourceTree = "<group>"; };
 		F7C134E2192A90DB003D20F8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F7C134E8192A90DB003D20F8 /* ChatClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C134E9192A90DB003D20F8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -112,11 +112,11 @@
 		F7C134D0192A90DB003D20F8 /* ChatClient */ = {
 			isa = PBXGroup;
 			children = (
-				F7C134D9192A90DB003D20F8 /* CCAppDelegate.h */,
-				F7C134DA192A90DB003D20F8 /* CCAppDelegate.m */,
+				F7C134D9192A90DB003D20F8 /* ChatClientAppDelegate.h */,
+				F7C134DA192A90DB003D20F8 /* ChatClientAppDelegate.m */,
 				F7C134DC192A90DB003D20F8 /* Main.storyboard */,
-				F7C134DF192A90DB003D20F8 /* CCViewController.h */,
-				F7C134E0192A90DB003D20F8 /* CCViewController.m */,
+				F7C134DF192A90DB003D20F8 /* ChatClientViewController.h */,
+				F7C134E0192A90DB003D20F8 /* ChatClientViewController.m */,
 				F7C134E2192A90DB003D20F8 /* Images.xcassets */,
 				F7C134D1192A90DB003D20F8 /* Supporting Files */,
 			);
@@ -250,9 +250,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7C134DB192A90DB003D20F8 /* CCAppDelegate.m in Sources */,
+				F7C134DB192A90DB003D20F8 /* ChatClientAppDelegate.m in Sources */,
 				F7C134D7192A90DB003D20F8 /* main.m in Sources */,
-				F7C134E1192A90DB003D20F8 /* CCViewController.m in Sources */,
+				F7C134E1192A90DB003D20F8 /* ChatClientViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

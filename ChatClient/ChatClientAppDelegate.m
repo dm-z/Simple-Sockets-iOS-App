@@ -1,14 +1,14 @@
 //
-//  CCAppDelegate.m
+//  ChatClientAppDelegate.m
 //  ChatClient
 //
 //  Created by Dmitry Zozulya on 19.05.14.
 //  Copyright (c) 2014 Dmitry Zozulya. All rights reserved.
 //
 
-#import "CCAppDelegate.h"
+#import "ChatClientAppDelegate.h"
 
-@implementation CCAppDelegate
+@implementation ChatClientAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
