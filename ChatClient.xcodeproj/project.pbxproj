@@ -196,7 +196,7 @@
 		F7C134BF192A90DB003D20F8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = CC;
+				CLASSPREFIX = ChatClient;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Dmitry Zozulya";
 				TargetAttributes = {
