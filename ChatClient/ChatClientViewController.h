@@ -9,5 +9,4 @@
 #import <UIKit/UIKit.h>
 
 @interface ChatClientViewController : UIViewController
-
 @end

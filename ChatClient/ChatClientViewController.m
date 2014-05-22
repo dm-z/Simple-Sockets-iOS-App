@@ -9,7 +9,8 @@
 #import "ChatClientViewController.h"
 
 @interface ChatClientViewController ()
-
+@property (weak, nonatomic) IBOutlet UIView *containerView;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 @end
 
 @implementation ChatClientViewController
@@ -17,13 +18,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the containerView, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
+- (IBAction)joinChat
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
-
 @end
