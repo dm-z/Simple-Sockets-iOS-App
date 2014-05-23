@@ -9,6 +9,7 @@
 #import "ChatClientViewController.h"
 
 @interface ChatClientViewController ()
+
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (retain, nonatomic) NSInputStream *inputStream;
@@ -31,12 +32,15 @@
 
 #pragma mark - private
 
-- (void)initNetworkCommunication {
+- (void)initNetworkCommunication
+{
     CFReadStreamRef readStream;
     CFWriteStreamRef writeStream;
-    CFStreamCreatePairWithSocketToHost(NULL, (CFStringRef)@"localhost", 80, &readStream, &writeStream);
-    self.inputStream = (NSInputStream *)readStream;
-    self.outputStream = (NSOutputStream *)writeStream;
+    CFStreamCreatePairWithSocketToHost(NULL, (CFStringRef) @"localhost", 80, &readStream, &writeStream);
+    self.inputStream = (__bridge_transfer NSInputStream *) readStream;
+    self.outputStream = (__bridge_transfer NSOutputStream *) writeStream;
+    CFBridgingRelease(readStream);
+    CFBridgingRelease(writeStream);
 }
 
 @end
