@@ -7,13 +7,13 @@
 //
 
 #import "ChatClientViewController.h"
+#import "ChatClientStream.h"
 
-@interface ChatClientViewController ()
+@interface ChatClientViewController () <NSStreamDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
-@property (retain, nonatomic) NSInputStream *inputStream;
-@property (retain, nonatomic) NSOutputStream *outputStream;
+@property (retain, nonatomic) ChatClientStream *stream;
 @end
 
 @implementation ChatClientViewController
@@ -21,26 +21,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self initNetworkCommunication];
-    // Do any additional setup after loading the containerView, typically from a nib.
+    self.stream = [[ChatClientStream alloc] initWithHost:@"localhost"
+                                                    port:80
+                                             andDelegate:self];
 }
 
 - (IBAction)joinChat
 {
-    NSLog(@"JoinChat");
-}
-
-#pragma mark - private
-
-- (void)initNetworkCommunication
-{
-    CFReadStreamRef readStream;
-    CFWriteStreamRef writeStream;
-    CFStreamCreatePairWithSocketToHost(NULL, (CFStringRef) @"localhost", 80, &readStream, &writeStream);
-    self.inputStream = (__bridge_transfer NSInputStream *) readStream;
-    self.outputStream = (__bridge_transfer NSOutputStream *) writeStream;
-    CFBridgingRelease(readStream);
-    CFBridgingRelease(writeStream);
+    NSString *response  = [NSString stringWithFormat:@"iam:%@", self.textField.text];
+    [self.stream write:response];
 }
 
 @end
