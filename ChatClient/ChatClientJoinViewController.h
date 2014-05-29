@@ -1,5 +1,5 @@
 //
-//  ChatClientViewController.h
+//  ChatClientJoinViewController.h
 //  ChatClient
 //
 //  Created by Dmitry Zozulya on 19.05.14.
@@ -8,5 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChatClientViewController : UIViewController
+@interface ChatClientJoinViewController : UIViewController
 @end

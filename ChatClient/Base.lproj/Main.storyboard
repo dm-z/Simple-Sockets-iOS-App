@@ -7,7 +7,7 @@
         <!--Chat Client View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ChatClientViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ChatClientJoinViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3hC-Zm-eXW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

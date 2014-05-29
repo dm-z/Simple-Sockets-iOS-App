@@ -1,22 +1,22 @@
 //
-//  ChatClientViewController.m
+//  ChatClientJoinViewController.m
 //  ChatClient
 //
 //  Created by Dmitry Zozulya on 19.05.14.
 //  Copyright (c) 2014 Dmitry Zozulya. All rights reserved.
 //
 
-#import "ChatClientViewController.h"
+#import "ChatClientJoinViewController.h"
 #import "ChatClientStream.h"
 
-@interface ChatClientViewController () <NSStreamDelegate>
+@interface ChatClientJoinViewController () <NSStreamDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (retain, nonatomic) ChatClientStream *stream;
 @end
 
-@implementation ChatClientViewController
+@implementation ChatClientJoinViewController
 
 - (void)viewDidLoad
 {
