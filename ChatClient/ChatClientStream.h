@@ -6,10 +6,18 @@
 #import <Foundation/Foundation.h>
 
 
-@interface ChatClientStream : NSObject
+@protocol ChatClientStreamDelegate
+@optional
+- (void)messageReceived:(NSString *)newMessage;
+@end
+
+@interface ChatClientStream : NSObject <NSStreamDelegate>
+
+@property (weak, nonatomic) id <ChatClientStreamDelegate> delegate;
 @property (retain, nonatomic) NSString *name;
+@property (readonly, nonatomic) NSMutableArray *messages;
 
 - (id)initWithHost:(NSString *)host
-              port:(NSUInteger)port
-       andDelegate:(id <NSStreamDelegate>)delegate;
+           andPort:(NSUInteger)port;
+- (void)sendMessage:(NSString *)message;
 @end

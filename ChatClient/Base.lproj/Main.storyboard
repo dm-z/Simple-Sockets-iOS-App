@@ -69,7 +69,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="qgt-wV-8rZ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="qgt-wV-8rZ" clearButtonMode="whileEditing" clearsOnBeginEditing="YES">
                                 <rect key="frame" x="24" y="78" width="218" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -81,14 +81,25 @@
                                 <state key="normal" title="Send">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendMessage" destination="y7J-oF-5Zh" eventType="touchUpInside" id="TM5-r7-Qav"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ysx-LB-XYr">
                                 <rect key="frame" x="0" y="117" width="318" height="448"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="y7J-oF-5Zh" id="nrE-JP-kd6"/>
+                                    <outlet property="delegate" destination="y7J-oF-5Zh" id="6kj-15-E6C"/>
+                                </connections>
                             </tableView>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="tableVIew" destination="ysx-LB-XYr" id="ZyW-Wv-MuO"/>
+                        <outlet property="textField" destination="qgt-wV-8rZ" id="WSM-jW-ZhO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" userLabel="First Responder" sceneMemberID="firstResponder" id="1Lt-86-Um2"/>
             </objects>

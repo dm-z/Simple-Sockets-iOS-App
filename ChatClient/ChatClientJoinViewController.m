@@ -10,7 +10,7 @@
 #import "ChatClientStream.h"
 #import "ChatClientViewController.h"
 
-@interface ChatClientJoinViewController () <NSStreamDelegate>
+@interface ChatClientJoinViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
@@ -19,18 +19,22 @@
 
 @implementation ChatClientJoinViewController
 
+#pragma mark - view lifecycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.chat = [[ChatClientStream alloc] initWithHost:@"localhost"
-                                                    port:80
-                                             andDelegate:self];
+    self.chat = [[ChatClientStream alloc] initWithHost:@"localhost" andPort:80];
 }
+
+#pragma mark - actions
 
 - (IBAction)joinChat
 {
     [self.chat setName:self.textField.text];
 }
+
+#pragma mark - private
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue
                  sender:(id)sender
