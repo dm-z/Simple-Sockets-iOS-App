@@ -8,12 +8,13 @@
 
 #import "ChatClientJoinViewController.h"
 #import "ChatClientStream.h"
+#import "ChatClientViewController.h"
 
 @interface ChatClientJoinViewController () <NSStreamDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
-@property (retain, nonatomic) ChatClientStream *stream;
+@property (retain, nonatomic) ChatClientStream *chat;
 @end
 
 @implementation ChatClientJoinViewController
@@ -21,15 +22,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.stream = [[ChatClientStream alloc] initWithHost:@"localhost"
+    self.chat = [[ChatClientStream alloc] initWithHost:@"localhost"
                                                     port:80
                                              andDelegate:self];
 }
 
 - (IBAction)joinChat
 {
-    NSString *response  = [NSString stringWithFormat:@"iam:%@", self.textField.text];
-    [self.stream write:response];
+    [self.chat setName:self.textField.text];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue
+                 sender:(id)sender
+{
+    [super prepareForSegue:segue sender:sender];
+
+    if ([segue.identifier isEqualToString:@"toChatClientViewController"]) {
+        ChatClientViewController *viewController = segue.destinationViewController;
+        viewController.chat = self.chat;
+    }
 }
 
 @end

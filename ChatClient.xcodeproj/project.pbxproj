@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5C2CF453608B8545DED55BF9 /* ChatClientStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CF820FD9C09C5A3397115 /* ChatClientStream.m */; };
+		5C2CF6CAA7FA18C5C5C1C073 /* ChatClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CF0FC4F844F6667D2282C /* ChatClientViewController.m */; };
 		F7C134CB192A90DB003D20F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C134CA192A90DB003D20F8 /* Foundation.framework */; };
 		F7C134CD192A90DB003D20F8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C134CC192A90DB003D20F8 /* CoreGraphics.framework */; };
 		F7C134CF192A90DB003D20F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C134CE192A90DB003D20F8 /* UIKit.framework */; };
@@ -35,8 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C2CF0FC4F844F6667D2282C /* ChatClientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatClientViewController.m; sourceTree = "<group>"; };
 		5C2CF820FD9C09C5A3397115 /* ChatClientStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatClientStream.m; sourceTree = "<group>"; };
 		5C2CFB64DBA4673AB8213B34 /* ChatClientStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatClientStream.h; sourceTree = "<group>"; };
+		5C2CFC9ED5BADEE3C59DB36B /* ChatClientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatClientViewController.h; sourceTree = "<group>"; };
 		F7C134C7192A90DB003D20F8 /* ChatClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C134CA192A90DB003D20F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F7C134CC192A90DB003D20F8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -124,6 +127,8 @@
 				F7C134D1192A90DB003D20F8 /* Supporting Files */,
 				5C2CF820FD9C09C5A3397115 /* ChatClientStream.m */,
 				5C2CFB64DBA4673AB8213B34 /* ChatClientStream.h */,
+				5C2CF0FC4F844F6667D2282C /* ChatClientViewController.m */,
+				5C2CFC9ED5BADEE3C59DB36B /* ChatClientViewController.h */,
 			);
 			path = ChatClient;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				F7C134D7192A90DB003D20F8 /* main.m in Sources */,
 				F7C134E1192A90DB003D20F8 /* ChatClientJoinViewController.m in Sources */,
 				5C2CF453608B8545DED55BF9 /* ChatClientStream.m in Sources */,
+				5C2CF6CAA7FA18C5C5C1C073 /* ChatClientViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

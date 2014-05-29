@@ -1,44 +1,98 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2GT-gH-X7v">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Chat Client View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <scene sceneID="2Gl-qM-wWD">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ChatClientJoinViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3hC-Zm-eXW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <navigationController definesPresentationContext="YES" sceneMemberID="viewController" id="2GT-gH-X7v">
+                    <navigationBar contentMode="scaleToFill" id="qhL-qt-FZp" key="navigationBar">
+                        <rect key="frame" x="0" y="0" width="0" height="0"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qk5-Ba-QxF" kind="relationship" relationship="rootViewController" id="elf-7r-4xA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" userLabel="First Responder" sceneMemberID="firstResponder" id="Uqa-6n-kZq"/>
+            </objects>
+            <point key="canvasLocation" x="-373" y="105"/>
+        </scene>
+        <scene sceneID="Pnf-sa-h16">
+            <objects>
+                <viewController customClass="ChatClientJoinViewController" sceneMemberID="viewController" id="qk5-Ba-QxF">
+                    <view key="view" contentMode="scaleToFill" id="4Eb-gu-B1Y">
+                        <rect key="frame" x="0" y="0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Bao-Tz-TGz">
-                                <rect key="frame" x="112" y="42" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="7UP-dP-WNo">
+                                <rect key="frame" x="112" y="84" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7fH-Nf-QtU">
-                                <rect key="frame" x="145" y="97" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4ZO-ej-48I">
+                                <rect key="frame" x="145" y="122" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Join">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="joinChat" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qx0-yC-SZI"/>
+                                    <action selector="joinChat" destination="qk5-Ba-QxF" eventType="touchUpInside" id="Bqu-x8-S6c"/>
+                                    <segue destination="y7J-oF-5Zh" kind="push" id="0KG-M1-hE1" identifier="toChatClientViewController"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem title="Choose your name" key="navigationItem" id="dW1-PA-cRr">
+                        <connections>
+                            <outlet property="titleView" destination="4Eb-gu-B1Y" id="29l-Ex-AYE"/>
+                        </connections>
+                    </navigationItem>
                     <connections>
-                        <outlet property="containerView" destination="3hC-Zm-eXW" id="6oD-ey-kbz"/>
-                        <outlet property="textField" destination="Bao-Tz-TGz" id="MCH-S1-Bwh"/>
+                        <outlet property="textField" destination="7UP-dP-WNo" id="b2Z-LX-79k"/>
+                        <outlet property="containerView" destination="4Eb-gu-B1Y" id="KUW-tq-J2o"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" sceneMemberID="firstResponder" id="sLG-9K-NZK"/>
             </objects>
-            <point key="canvasLocation" x="75" y="106"/>
+            <point key="canvasLocation" x="50" y="105"/>
+        </scene>
+        <scene sceneID="VZt-5M-ybO">
+            <objects>
+                <viewController sceneMemberID="viewController" id="y7J-oF-5Zh" customClass="ChatClientViewController">
+                    <view contentMode="scaleToFill" key="view" id="Xdr-U1-3Se">
+                        <rect key="frame" x="0" y="0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="qgt-wV-8rZ">
+                                <rect key="frame" x="24" y="78" width="218" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tQ2-lc-alc">
+                                <rect key="frame" x="249" y="78" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ysx-LB-XYr">
+                                <rect key="frame" x="0" y="117" width="318" height="448"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" userLabel="First Responder" sceneMemberID="firstResponder" id="1Lt-86-Um2"/>
+            </objects>
+            <point key="canvasLocation" x="495" y="103"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -46,4 +100,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="elf-7r-4xA"/>
+    </inferredMetricsTieBreakers>
 </document>

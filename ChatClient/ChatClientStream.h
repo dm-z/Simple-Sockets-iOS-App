@@ -7,8 +7,9 @@
 
 
 @interface ChatClientStream : NSObject
+@property (retain, nonatomic) NSString *name;
+
 - (id)initWithHost:(NSString *)host
               port:(NSUInteger)port
        andDelegate:(id <NSStreamDelegate>)delegate;
-- (NSInteger)write:(NSString *)string;
 @end

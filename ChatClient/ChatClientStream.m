@@ -48,5 +48,12 @@
     return [self.outputStream write:[data bytes] maxLength:[data length]];
 }
 
+- (void)setName:(NSString *)name
+{
+    _name = name;
+    NSString *response = [NSString stringWithFormat:@"iam:%@", name];
+    [self write:response];
+}
+
 
 @end
